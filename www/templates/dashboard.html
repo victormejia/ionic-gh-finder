@@ -1,0 +1,14 @@
+<ion-view view-title="{{user.name}}">
+	<ion-nav-bar>
+	  <ion-nav-back-button class="button button-icon">
+	    <i class="icon ion-ios-arrow-back"></i> Search
+	  </ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content class="dashboard">
+			<img class="full-image" src="{{user.avatar_url}}">
+			<div class="dashboard-buttons">
+				<button class="button button-block button-calm item" ng-click="viewProfile()">View Profile</button>
+				<button class="button button-block button-royal item" ng-click="viewRepos()">View Repositories</button>
+			</div>
+	</ion-content>
+</ion-view>

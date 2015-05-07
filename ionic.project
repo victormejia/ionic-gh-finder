@@ -1,0 +1,12 @@
+{
+  "name": "ionic-gh-notetaker",
+  "app_id": "b6df80f5",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
