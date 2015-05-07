@@ -17,10 +17,45 @@ $dark:                            #444 !default;
 
 $calm: #44A3CE;
 $positive: #22282C;
-$font-size-base: 18px;
+$button-light-text: #000;
+$font-size-base: 16px;
 
-.logo {
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+.item  {
+	h2 {
+		font-size: $font-size-large;
+	}
+	p {
+		color: $base-color;
+		font-size: $font-size-base;
+	}
+}
+
+.button {
+	font-size: $font-size-large;
+}
+
+.search:after {
+	content: "";
+	background-image: url(../img/Octocat.png);
+	opacity: 0.5;
+	top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.search-form {
 	text-align: center;
+	margin-top:50px;
 }
 
 .dashboard {
@@ -58,8 +93,3 @@ $font-size-base: 18px;
 		}
 	}
 }
-// The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";

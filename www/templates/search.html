@@ -1,28 +1,10 @@
 <ion-view view-title="GitHub Note Taker">
-	<ion-content>
-				<div class="logo">
-					<img src="img/Octocat.png" height="150">
-				</div>
-
-				<div class="">
-				  <label class="item item-radio" ng-click="clearCity()">
-				    <input type="radio" name="group" ng-model="searchInfo.searchType" value="username">
-				    <div class="item-content">Username</div>
-				    <i class="radio-icon ion-checkmark-round"></i>
-				  </label>
-				  <label class="item item-radio" ng-click="locate()">
-				    <input type="radio" name="group" ng-model="searchInfo.searchType" value="location">
-				    <div class="item-content">City</div>
-				    <i class="radio-icon ion-checkmark-round"></i>
-				  </label>
-				</div>
-
-				<div class="padding">
-				  <label class="item item-input">
-				    <input type="text" placeholder="" ng-model="searchInfo.searchText">
-				  </label>
-				  <button class="button button-block button-positive" ng-click="search(username)">Search</button>
-				</div>
-
+	<ion-content class="search">
+		<div class="search-form padding">
+			  <label class="item item-input ">
+			    <input type="text" placeholder="username" ng-model="username">
+			  </label>
+			  <button class="button button-block button-positive" ng-click="search(username)">SEARCH</button>
+		</div>
 	</ion-content>
 </ion-view>
