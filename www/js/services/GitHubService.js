@@ -9,8 +9,7 @@ angular.module('app')
 				function (resp) {
 					var user =  resp.data;
 					if (user.avatar_url) {
-						// don't return until we prefetch the user image, for a more
-						// smooth experience
+						// don't return until we prefetch the user image, for a more smooth experience
 						return $ImageCacheFactory.Cache([user.avatar_url])
 							.then(function () {
 								return user;
