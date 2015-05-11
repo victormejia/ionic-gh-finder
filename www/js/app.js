@@ -46,6 +46,12 @@ angular.module('app', ['ionic', 'ngCordova', 'ionic.ion.imageCacheFactory'])
     controller: 'ProfileController'
   })
 
+  .state('repos', {
+    url: '/repos',
+    templateUrl: 'templates/repos.html',
+    controller: 'ReposController'
+  })
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/search');
