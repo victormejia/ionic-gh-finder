@@ -28,24 +28,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 .item  {
-	h2 {
-		font-size: $font-size-large;
-	}
-	p {
-		color: $base-color;
-		font-size: $font-size-base;
-	}
+  h2 {
+    font-size: $font-size-large;
+  }
+  p {
+    color: $base-color;
+    font-size: $font-size-base;
+  }
 }
 
 .button {
-	font-size: $font-size-large;
+  font-size: $font-size-large;
 }
 
 .search:after {
-	content: "";
-	background-image: url(../img/Octocat.png);
-	opacity: 0.5;
-	top: 0;
+  content: "";
+  background-image: url(../img/Octocat.png);
+  opacity: 0.5;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -54,42 +54,42 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .search-form {
-	text-align: center;
-	margin-top:50px;
+  text-align: center;
+  margin-top:50px;
 }
 
 .dashboard {
-	color: #fff;
+  color: #fff;
 
-	img {
-		margin-bottom: -5px;
-	}
+  img {
+    margin-bottom: -5px;
+  }
 
-	.button.button-block {
-		border-radius: 0px;
-		margin: 0px;
-		border-width: 0px;
-	}
+  .button.button-block {
+    border-radius: 0px;
+    margin: 0px;
+    border-width: 0px;
+  }
 
-	.dashboard-buttons {
-		margin-top: -1px;
-	}
+  .dashboard-buttons {
+    margin-top: -1px;
+  }
 }
 
 .profile {
-	.item h2 {
-		color: $calm;
-	}
+  .item h2 {
+    color: $calm;
+  }
 
-	.item.profile-badge {
-		text-align: center;
-		background-color: $calm;
-		img {
-			height: 150px;
-			border-radius: 100px
-		}
-		h2 {
-			color: #fff;
-		}
-	}
+  .item.profile-badge {
+    text-align: center;
+    background-color: $calm;
+    img {
+      height: 150px;
+      border-radius: 100px
+    }
+    h2 {
+      color: #fff;
+    }
+  }
 }

@@ -18,7 +18,6 @@ angular.module('app', ['ionic', 'ngCordova', 'ionic.ion.imageCacheFactory'])
   });
 })
 
-
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
