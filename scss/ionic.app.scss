@@ -15,8 +15,10 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+
 $calm: #44A3CE;
 $positive: #22282C;
+$energized: #34495e;
 $button-light-text: #000;
 $font-size-base: 16px;
 
@@ -25,7 +27,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
 
 .item  {
   h2 {
@@ -41,26 +42,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   font-size: $font-size-large;
 }
 
-.search:after {
-  content: "";
-  background-image: url(../img/Octocat.png);
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
 .search-form {
-  text-align: center;
   margin-top:50px;
 }
 
 .dashboard {
-  color: #fff;
-
   img {
     margin-bottom: -5px;
   }
@@ -81,7 +67,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     color: $calm;
   }
 
+  .item:nth-child(2) {
+    border-top-width: 0px;
+  }
+
   .item.profile-badge {
+    border-width: 0px;
     text-align: center;
     background-color: $calm;
     img {

@@ -1,40 +1,35 @@
 <ion-view view-title="Profile">
-  <ion-nav-bar>
-    <ion-nav-back-button class="button button-icon">
-      <i class="icon ion-ios-arrow-back"></i> {{user.name}}
-    </ion-nav-back-button>
-  </ion-nav-bar>
   <ion-content class="profile">
-    <div class="list">
-      <div class="item profile-badge">
+    <ion-list>
+      <ion-item class="item profile-badge">
         <img src="{{user.avatar_url}}">
         <h2>{{user.name}}</h2>
         <h2>{{user.login}}</h2>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Company</h2>
         <p>{{user.company}}</p>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Location</h2>
         <p>{{user.location}}</p>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Followers</h2>
         <p>{{user.followers}}</p>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Following</h2>
         <p>{{user.following}}</p>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Email</h2>
         <p>{{user.email || 'N/A'}}</p>
-      </div>
-      <div class="item">
+      </ion-item>
+      <ion-item class="item">
         <h2>Public Repos</h2>
         <p>{{user.public_repos}}</p>
-      </div>
-    </div>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

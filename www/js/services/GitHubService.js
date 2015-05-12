@@ -1,10 +1,19 @@
 angular.module('app')
 
-.factory('GitHubService', function($http, $ImageCacheFactory) {
+.factory('GitHubService', function($window, $http, $ImageCacheFactory, $firebaseArray) {
+  var apiUrl = 'https://api.github.com/users/';
+  
   return {
-    getBio: function (username) {
+    setUser: function (user) {
+      $window.localStorage['user'] = JSON.stringify(user);
+    },
+    getCurrentUser: function () {
+      var user = $window.localStorage['user'];
+      return user ? JSON.parse(user) : {};
+    },
+    getProfile: function (username) {
       var username = username.toLowerCase().trim();
-      var url = 'https://api.github.com/users/' + username;
+      var url = apiUrl + username;
       return $http.get(url).then(function (resp) {
         var user =  resp.data;
         if (user.avatar_url) {
@@ -21,17 +30,15 @@ angular.module('app')
     },
     getRepos: function (username) {
       username = username.toLowerCase().trim();
-      var url = 'https://api.github.com/users/' + username + '/repos';
+      var url = apiUrl + username + '/repos';
       return $http.get(url).then(function (resp) {
         return resp.data;
       });
     },
-    searchByCity: function (city) {
-      var url = 'https://api.github.com/search/users?q=location:\"' + city + '\"';
-      return $http.get(url).then(
-        function (resp) {
-          return resp.data.items;
-        });
+    getNotes: function (username) {
+      var url = 'https://ionic-gh-notes.firebaseio.com/';
+      var notesRef = new Firebase(url).child(username);
+      return $firebaseArray(notesRef);
     }
   }
 })

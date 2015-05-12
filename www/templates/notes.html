@@ -1,0 +1,25 @@
+<ion-view view-title="Notes">
+  <ion-content class="profile">
+    <ion-list> 
+      <ion-item class="profile-badge">
+        <img src="{{user.avatar_url}}">
+        <h2>{{user.name}}</h2>
+        <h2>{{user.login}}</h2>
+      </ion-item>
+      <ion-item ng-repeat="item in notes">
+        {{item.note}}
+        <ion-option-button class="button-assertive" ng-click="delete(item)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-positive item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="search" sticky-input ng-model="note" on-focus="inputUp()" on-blur="inputDown()">
+    </label>
+    <button class="button button-clear" ng-click="addNote()">
+      SUBMIT
+    </button>
+  </ion-footer-bar>
+</ion-view>

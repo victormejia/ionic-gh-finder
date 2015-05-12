@@ -1,9 +1,4 @@
 <ion-view view-title="Profile">
-  <ion-nav-bar>
-    <ion-nav-back-button class="button button-icon">
-      <i class="icon ion-ios-arrow-back"></i> {{user.name}}
-    </ion-nav-back-button>
-  </ion-nav-bar>
   <ion-content class="profile">
     <div class="list">
       <div class="item profile-badge">
@@ -12,7 +7,7 @@
         <h2>{{user.login}}</h2>
       </div>
       <div class="item" ng-repeat="repo in repos">
-        <a href="#" ng-click="openRepo(repo.full_name)"><h2>{{repo.name}}</h2></a>
+        <h2 ng-click="openRepo(repo.full_name)">{{repo.name}}</h2>
         <p>Stars: {{repo.stargazers_count}}</p>
         <p>{{repo.description}}</p>
       </div>
