@@ -36,7 +36,7 @@ angular.module('app')
       });
     },
     getNotes: function (username) {
-      var url = 'https://ionic-gh-notes.firebaseio.com/';
+      var url = 'https://<your-firebase>.firebaseio.com/';
       var notesRef = new Firebase(url).child(username);
       return $firebaseArray(notesRef);
     }
