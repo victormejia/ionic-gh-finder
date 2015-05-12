@@ -18,5 +18,5 @@ This is a [modified] Ionic port of [GitHub Note Taker](https://github.com/tylerm
 Make sure to update the url of your own Firebase (```www/services/GitHubService.js```).
 
 ## To do
-  [ ] Setup for android
+  * [ ] Setup for android
 
